@@ -46,8 +46,10 @@ function! s:InitWindow() abort "{{{2
 	" Window-local options
 	setlocal nolist
 	setlocal nowrap
-	setlocal winfixwidth
-	setlocal winfixheight
+	if g:nuake_fixed_size == 1
+		setlocal winfixwidth
+		setlocal winfixheight
+	endif
 	setlocal nospell
 	setlocal nonumber
 	setlocal norelativenumber
